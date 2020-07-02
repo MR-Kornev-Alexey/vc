@@ -55,10 +55,10 @@ export default {
     },
     links() {
       return [
-        { icon: "mdi-home", text: "Главная", route: "/" },
-        { icon: "mdi-school", text: "Образваоние", route: "/education" },
-        { icon: "mdi-script", text: "Последние работы", route: "/projects" },
-        { icon: "mdi-launch", text: "Услуги", route: "/service" },
+        { icon: "mdi-home",    text: "Главная", route: "/" },
+        { icon: "mdi-school",  text: "Образваоние", route: "/education" },
+        { icon: "mdi-script",  text: "Последние работы", route: "/projects" },
+        { icon: "mdi-launch",  text: "Услуги", route: "/service" },
         { icon: "mdi-account", text: "Контакт", route: "/contact" }
       ];
     }
