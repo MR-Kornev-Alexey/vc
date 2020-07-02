@@ -60,11 +60,16 @@ export default {
     },
     links() {
       return [
-        { id:1, icon: "mdi-home", text: "Главная", route: "/" },
-        { id:2, icon: "mdi-school", text: "Образование", route: "/education" },
-        { id:3, icon: "mdi-script", text: "Последние работы", route: "/projects" },
-        { id:4, icon: "mdi-launch", text: "Услуги", route: "/service" },
-        { id:5, icon: "mdi-account", text: "Контакт", route: "/contact" }
+        { id: 1, icon: "mdi-home", text: "Главная", route: "/" },
+        { id: 2, icon: "mdi-school", text: "Образование", route: "/education" },
+        {
+          id: 3,
+          icon: "mdi-script",
+          text: "Последние работы",
+          route: "/projects"
+        },
+        { id: 4, icon: "mdi-launch", text: "Услуги", route: "/service" },
+        { id: 5, icon: "mdi-account", text: "Контакт", route: "/contact" }
       ];
     }
   }
