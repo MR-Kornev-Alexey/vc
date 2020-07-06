@@ -7,8 +7,12 @@
         <span class="font-weight-light"> Корнев</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <img src="assets/img/logo-mrk-white.png" alt="" />
+      <v-flex class="d-flex justify-end">
+        <img
+          :src="require('../../assets/img/logo_mrk_white.png')"
+          height="32"
+        />
+      </v-flex>
     </v-app-bar>
     <v-navigation-drawer flat v-model="drawer" dark app :src="bg">
       <v-layout column align-center>

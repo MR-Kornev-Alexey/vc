@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center text-center  mt-4">
+    <v-row class="text-center  mt-4">
       <v-col cols="4" class="justify-center align-self-center">
         <v-img
           :src="require('../../assets/img/alex.jpg')"
@@ -27,7 +27,8 @@
           Постоянно учусь и осваиваю новые технологии в веб-программировании.
         </p>
         <p class="text-left">
-          Освоил Photoshop и CorelDraw и могу сам создвать макеты любого уровня.
+          Освоил Photoshop и Corel Draw и могу сам создать макеты любого
+          уровня(.SVG, .PSD)
         </p>
       </v-col>
       <v-col cols="4" class="justify-center align-self-center">
@@ -59,6 +60,64 @@
         </v-flex>
       </v-col>
     </v-row>
+    <v-row class="justify-space-around">
+      <v-card cols="3" v-for="item in serviceWork" :key="item.id">
+        <v-card-title class="text-center justify-center">
+          {{ item.text }}
+        </v-card-title>
+        <v-flex class="service-item text-center justify-center">
+          <img :src="item.icon" alt="" />
+        </v-flex>
+        <v-card-subtitle class="service-item-description">
+          {{ item.description }}
+        </v-card-subtitle>
+      </v-card>
+    </v-row>
+    <v-row>
+      <v-col cols="6">
+        <v-flex class="services-main">
+          <h2>Отзывы</h2>
+        </v-flex>
+      </v-col>
+    </v-row>
+    <v-row justify="center" class="mt-6">
+      <v-app id="inspire"  class="inspire" >
+        <v-card elevation="24" max-width="600" class="mx-auto" light>
+          <v-carousel
+            :continuous="true"
+            :cycle="true"
+            :show-arrows="true"
+            hide-delimiter-background
+            delimiter-icon="mdi-minus"
+            height="300"
+          >
+            <v-carousel-item  class="v-application-my" v-for="(item, i) in Testimonials" :key="i">
+              <v-row class="fill-height" align="center" justify="center">
+                <div class="testimonial-content">
+                  <div class="testimonial-text">
+                    {{ item.description }}
+                  </div>
+                </div>
+                <!-- /Testimonial Content -->
+                <!-- Testimonial Author -->
+                <div class="testimonial-credits d-flex">
+                  <!-- Picture -->
+                  <div class="testimonial-picture">
+                    <img :src="item.icon" height="60px" alt="" />
+                  </div>
+                  <!-- /Picture -->
+                  <!-- Testimonial author information -->
+                  <div class="testimonial-author-info">
+                    <p class="testimonial-author">{{ item.text }}</p>
+                    <p class="testimonial-firm">{{ item.company }}</p>
+                  </div>
+                </div>
+              </v-row>
+            </v-carousel-item>
+          </v-carousel>
+        </v-card>
+      </v-app>
+    </v-row>
   </v-container>
 </template>
 
@@ -71,7 +130,7 @@ export default {
       {
         id: 1,
         text: "Возраст",
-        data: "53"
+        data: "52"
       },
       {
         id: 2,
@@ -128,30 +187,79 @@ export default {
     serviceWork: [
       {
         id: 1,
-        text: "FullStack-программирование",
-        icon: "mdi-vk",
-        description: ""
+        text: "FullStack",
+        icon: "../../assets/img/coding.png",
+        description:
+          "JavaScript - develop. Frontend  на Vue|Vuetify. Backend Node.js | Express.js Создание сервисов любой сложности"
       },
       {
         id: 2,
         text: "Web-дизайн",
-        icon: "mdi-vk",
-        description: ""
+        icon: "../../assets/img/develop.png",
+        description:
+          "Разработка прототипа. Выбор инструментов. Создание сайта | сервиса с нуля. Кроссбраузерная верстка"
       },
       {
         id: 3,
-        text: "Правка макетов .PSD",
-        icon: "mdi-vk",
-        description: ""
+        text: "Правка .PSD",
+        icon: "../../assets/img/pattern.png",
+        description:
+          "Создание растровых изображений для сайта. Верстка шаблонов любой сложности"
       },
       {
         id: 4,
-        text: "Создание изображений",
-        icon: "mdi-vk",
-        description: ""
+        text: "Создание .SVG",
+        icon: "../../assets/img/pic.png",
+        description:
+          "Создание векторных изображений и иконок под задачи проекта."
+      }
+    ],
+    Testimonials: [
+      {
+        id: 1,
+        text: "Ярослав К.",
+        company: "Клевер Лейбл Групп",
+        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/benefritz/128.jpg",
+        description:
+          "Верстка была сделана четко и в срок. В ходе работы было выявлено несколько косяков дизайна, но они были устранены исполнителем. Было предложено несколько вариантов по более интересному и логичному отображению мобильной версии. В общем, рекомендую, ответственный, инициативный и квалифицированный исполнитель."
+      },
+      {
+        id: 2,
+        text: "Дмитрий А.",
+        company: "Предприниматель",
+        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/hellofeverrrr/128.jpg",
+        description: "Рекомендую к сотрудничеству! Спасибо за проделанную работу."
+      },
+      {
+        id: 3,
+        text: "Светлана Е.",
+        company: "Предприниматель",
+        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/eitarafa/128.jpg",
+        description: "Отзывчивый исполнитель. Все по честному:  и сроки, и оплата. Хорошая скорость выполнения заказа."
+      },
+      {
+        id: 4,
+        text: "Андрей Ю.",
+        company: "Предприниматель",
+        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/okseanjay/128.jpg",
+        description: "Алексей! Спасибо..... Желаю побольше благодарных клиентов, денег и расширение услуг..."
+      },
+      {
+        id: 5,
+        text: "Юрий В.",
+        company: "Предприниматель",
+        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/jlsolerdeltoro/128.jpg",
+        description: "Добавлю к общему числу и свой положительный отзыв.\n" +
+                "Алексей адекватный, честный и весьма оперативный в части обработки заказа. Всегда готов идти на встречу.\n" +
+                "Впечатления только положительные.\n" +
+                "\n" +
+                "Удачи в развитии и приумножения количества постоянных клиентов!"
       }
     ]
-  })
+  }),
+  mounted() {
+    document.querySelector(".inspire").firstChild.className = "new-wrap";
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -167,7 +275,7 @@ export default {
   display: block;
   width: 30px;
   height: 3px;
-  background: #3d498c;
+  background: #444fee;
   bottom: 0;
   right: calc(100% - 35px);
 }
@@ -182,7 +290,53 @@ export default {
 
 .services-main {
   position: relative;
-  border-left: 3px solid #3d498c;
+  border-left: 3px solid #444fee;
   padding-left: 12px;
+}
+
+.service-item-description {
+  font-size: 14px;
+  max-width: 240px;
+  font-weight: 500;
+}
+.service-item {
+  img {
+    height: 140px;
+    font-size: 16px;
+    color: #444fee;
+  }
+  .testimonial-content {
+    color: black;
+  }
+}
+.testimonial-text {
+  font-size: 14px;
+  color: #303030;
+  width: 550px;
+}
+.testimonial-picture {
+  margin-right: 12px;
+}
+.testimonial-author {
+  font-weight: 500;
+  color: #404040;
+}
+.testimonial-firm {
+  color: #404040;
+}
+#inspire {
+
+  height: 300px;
+}
+.new-wrap {
+  flex: 1 1 auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+  height: 300px !important;
+  padding-bottom: 40px;
 }
 </style>
