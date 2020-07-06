@@ -88,24 +88,20 @@
         class=" d-flex text-left justify-start"
       >
         <div class="skill-image text-center align-self-center">
-          <img
-                  :src="item.image"
-                  class="my-3 "
-                  :height="item.height"
-                  alt=""
-          />
+          <img :src="item.image" class="my-3 " :height="item.height" alt="" />
         </div>
 
-        <div class="ml-4 skill-title text-center align-self-center">{{item.text}}</div>
-        <v-flex class="ml-4 skill-title text-center align-self-center" >
+        <div class="ml-4 skill-title text-center align-self-center">
+          {{ item.text }}
+        </div>
+        <v-flex class="ml-4 skill-title text-center align-self-center">
           <v-progress-linear
-                  :color="item.color"
-                  height="10"
-                  :value="item.progress"
-                  striped
+            :color="item.color"
+            height="10"
+            :value="item.progress"
+            striped
           ></v-progress-linear>
         </v-flex>
-
       </v-col>
     </v-row>
   </v-container>
@@ -120,65 +116,65 @@ export default {
         id: 1,
         image: "../../assets/img/nodejs-1.svg",
         height: 50,
-        text:"Node.js",
+        text: "Node.js",
         progress: 80,
-        color:"light-green darken-4"
+        color: "light-green darken-4"
       },
       {
         id: 2,
         image: "../../assets/img/html.svg",
         height: 50,
-        text:"HTML5",
+        text: "HTML5",
         progress: 95,
-        color:"deep-orange"
+        color: "deep-orange"
       },
       {
         id: 3,
         image: "../../assets/img/css-5.svg",
         height: 50,
-        text:"CSS3",
+        text: "CSS3",
         progress: 95,
-        color:"light-blue"
+        color: "light-blue"
       },
       {
         id: 5,
         image: "../../assets/img/javascript-4.svg",
         height: 50,
-        text:"JavaScript",
+        text: "JavaScript",
         progress: 85,
-        color:"amber"
+        color: "amber"
       },
       {
         id: 6,
         image: "../../assets/img/vuetify.png",
         height: 50,
-        text:"Vuetify.js",
+        text: "Vuetify.js",
         progress: 75,
-        color:"light-blue lighten-3"
+        color: "light-blue lighten-3"
       },
       {
         id: 7,
         image: "../../assets/img/jquery-1.svg",
         height: 20,
-        text:"jQuery.js",
+        text: "jQuery.js",
         progress: 88,
-        color:"light-blue darken-3"
+        color: "light-blue darken-3"
       },
       {
         id: 8,
         image: "../../assets/img/corel-3.svg",
         height: 50,
-        text:"Corel Draw",
+        text: "Corel Draw",
         progress: 78,
-        color:"red accent-2"
+        color: "red accent-2"
       },
       {
         id: 9,
         image: "../../assets/img/photoshop-cc.svg",
         height: 50,
-        text:"Photoshop",
+        text: "Photoshop",
         progress: 90,
-        color:"blue darken-2"
+        color: "blue darken-2"
       }
     ],
 
@@ -258,10 +254,9 @@ export default {
 }
 .skill-image {
   width: 120px;
-
 }
-  .skill-title{
-    width: 100px;
-    font-weight: 500;
-  }
+.skill-title {
+  width: 100px;
+  font-weight: 500;
+}
 </style>
