@@ -91,13 +91,13 @@
           <img :src="item.image" class="my-3 " :height="item.height" alt="" />
         </div>
 
-        <div class="ml-4 skill-title text-center align-self-center">
+        <div class="mx-4 skill-title text-center align-self-center">
           {{ item.text }}
         </div>
         <v-flex class="ml-4 skill-title text-center align-self-center">
           <v-progress-linear
             :color="item.color"
-            height="10"
+            height="16"
             :value="item.progress"
             striped
           ></v-progress-linear>
