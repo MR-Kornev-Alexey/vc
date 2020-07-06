@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import vHome from "@/components/v-home/v-home";
-import vEducation from  "@/components/v-education/v-education";
+import vEducation from "@/components/v-education/v-education";
 
 Vue.use(VueRouter);
 

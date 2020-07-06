@@ -81,7 +81,7 @@
       </v-col>
     </v-row>
     <v-row justify="center" class="mt-6">
-      <v-app id="inspire"  class="inspire" >
+      <v-app id="inspire" class="inspire">
         <v-card elevation="24" max-width="600" class="mx-auto" light>
           <v-carousel
             :continuous="true"
@@ -91,7 +91,11 @@
             delimiter-icon="mdi-minus"
             height="300"
           >
-            <v-carousel-item  class="v-application-my" v-for="(item, i) in Testimonials" :key="i">
+            <v-carousel-item
+              class="v-application-my"
+              v-for="(item, i) in Testimonials"
+              :key="i"
+            >
               <v-row class="fill-height" align="center" justify="center">
                 <div class="testimonial-content">
                   <div class="testimonial-text">
@@ -219,7 +223,8 @@ export default {
         id: 1,
         text: "Ярослав К.",
         company: "Клевер Лейбл Групп",
-        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/benefritz/128.jpg",
+        icon:
+          "https://s3.amazonaws.com/uifaces/faces/twitter/benefritz/128.jpg",
         description:
           "Верстка была сделана четко и в срок. В ходе работы было выявлено несколько косяков дизайна, но они были устранены исполнителем. Было предложено несколько вариантов по более интересному и логичному отображению мобильной версии. В общем, рекомендую, ответственный, инициативный и квалифицированный исполнитель."
       },
@@ -227,33 +232,40 @@ export default {
         id: 2,
         text: "Дмитрий А.",
         company: "Предприниматель",
-        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/hellofeverrrr/128.jpg",
-        description: "Рекомендую к сотрудничеству! Спасибо за проделанную работу."
+        icon:
+          "https://s3.amazonaws.com/uifaces/faces/twitter/hellofeverrrr/128.jpg",
+        description:
+          "Рекомендую к сотрудничеству! Спасибо за проделанную работу."
       },
       {
         id: 3,
         text: "Светлана Е.",
         company: "Предприниматель",
         icon: "https://s3.amazonaws.com/uifaces/faces/twitter/eitarafa/128.jpg",
-        description: "Отзывчивый исполнитель. Все по честному:  и сроки, и оплата. Хорошая скорость выполнения заказа."
+        description:
+          "Отзывчивый исполнитель. Все по честному:  и сроки, и оплата. Хорошая скорость выполнения заказа."
       },
       {
         id: 4,
         text: "Андрей Ю.",
         company: "Предприниматель",
-        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/okseanjay/128.jpg",
-        description: "Алексей! Спасибо..... Желаю побольше благодарных клиентов, денег и расширение услуг..."
+        icon:
+          "https://s3.amazonaws.com/uifaces/faces/twitter/okseanjay/128.jpg",
+        description:
+          "Алексей! Спасибо..... Желаю побольше благодарных клиентов, денег и расширение услуг..."
       },
       {
         id: 5,
         text: "Юрий В.",
         company: "Предприниматель",
-        icon: "https://s3.amazonaws.com/uifaces/faces/twitter/jlsolerdeltoro/128.jpg",
-        description: "Добавлю к общему числу и свой положительный отзыв.\n" +
-                "Алексей адекватный, честный и весьма оперативный в части обработки заказа. Всегда готов идти на встречу.\n" +
-                "Впечатления только положительные.\n" +
-                "\n" +
-                "Удачи в развитии и приумножения количества постоянных клиентов!"
+        icon:
+          "https://s3.amazonaws.com/uifaces/faces/twitter/jlsolerdeltoro/128.jpg",
+        description:
+          "Добавлю к общему числу и свой положительный отзыв.\n" +
+          "Алексей адекватный, честный и весьма оперативный в части обработки заказа. Всегда готов идти на встречу.\n" +
+          "Впечатления только положительные.\n" +
+          "\n" +
+          "Удачи в развитии и приумножения количества постоянных клиентов!"
       }
     ]
   }),
@@ -262,7 +274,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .main-out-data {
   font-weight: 600;
   position: relative;
@@ -325,7 +337,6 @@ export default {
   color: #404040;
 }
 #inspire {
-
   height: 300px;
 }
 .new-wrap {
