@@ -64,6 +64,7 @@ export default {
         bottom: 0,
         transition,
         flip: true
+
       }
     })
   }
@@ -76,6 +77,7 @@ img {
   display: block;
   max-width: 100%;
   margin: auto;
+  box-shadow: 5px 3px 4px 2px  #888888;
 }
 
 img.zoomed {

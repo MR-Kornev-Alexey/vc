@@ -13,16 +13,17 @@
       >
         <v-flex>
           <h2>{{ item.title }}</h2>
-          <p class="item-subtitle" >{{ item.subtitle }}</p>
-          <a  class="item-link" target="_blank" :href="item.link"><p>{{ item.view }}</p></a>
-          <p class="item-tools" >Инструменты:</p>
-          <p class="item-sub-tools" >{{ item.tools }}</p>
+          <p class="item-subtitle">{{ item.subtitle }}</p>
+          <a class="item-link" target="_blank" :href="item.link"
+            ><p>{{ item.view }}</p></a
+          >
+          <p class="item-tools">Инструменты:</p>
+          <p class="item-sub-tools">{{ item.tools }}</p>
         </v-flex>
-        <ZoomImage
-          imageWidth="400"
-          imageHeight="200"
-          :src="item.image"
-        />
+        <div>
+          <ZoomImage imageWidth="400" imageHeight="200" :src="item.image" />
+        </div>
+
       </v-col>
     </v-row>
   </v-container>
@@ -35,25 +36,26 @@ export default {
   data: function() {
     return {
       myLinks: [
+
         {
           id: 1,
-          image: "../../assets/img/sreens-1.jpg",
-          title: 'Музыкальное агенство "Klever Групп"',
-          subtitle:
-            "Сервис по продвижению музыкальных релизов. Все линки релиза собраны в одном месте",
-          view: "Панель администратора (BackEnd).",
-          link:"https://klvr.link/registration",
-          tools:
-            "Node.js, Express.js, S3, PostgreSQL, Vuetify.js, Bootsrap4, HTML5, CSS3"
-        },
-        {
-          id: 2,
           image: "../../assets/img/sreens-2.jpg",
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
+        },
+        {
+          id: 2,
+          image: "../../assets/img/sreens-1.jpg",
+          title: 'Музыкальное агенство "Klever Групп"',
+          subtitle:
+                  "Сервис по продвижению музыкальных релизов. Все линки релиза собраны в одном месте",
+          view: "Панель администратора (BackEnd).",
+          link: "https://klvr.link/registration",
+          tools:
+                  "Node.js, Express.js, S3, PostgreSQL, Vuetify.js, Bootsrap4, HTML5, CSS3"
         },
         {
           id: 3,
@@ -61,7 +63,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -70,7 +72,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -79,7 +81,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -88,7 +90,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -97,7 +99,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -106,7 +108,7 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
@@ -115,16 +117,16 @@ export default {
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         },
         {
           id: 10,
-          image: "../../assets/img/sreens-9.jpg",
+          image: "../../assets/img/sreens-10.jpg",
           title: 'Музыкальное агенство "Klever Групп"',
           subtitle: "Сервис по продвижению музыкальных релизов.",
           view: "Страница релиза ''MIA BOYKA - ЭМЭМДЭНС'' (FrontEnd)",
-          link:"https://klvr.link/ememdens",
+          link: "https://klvr.link/ememdens",
           tools: "Express.js, S3, jQuery, Bootsrap4, HTML5, CSS3"
         }
       ]
@@ -138,31 +140,32 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .item-subtitle, .item-sub-tools {
-    width: 95%;
-  }
-  .item-link {
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .item-link:hover{
-    text-decoration: none;
-    cursor: pointer;
-    color: #3d498c;
-  }
-  .item-tools {
-    position: relative;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  .item-tools::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #444fee;
-    bottom: 0;
-    right: calc(100% - 35px);
-  }
+.item-subtitle,
+.item-sub-tools {
+  width: 95%;
+}
+.item-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.item-link:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3d498c;
+}
+.item-tools {
+  font-weight: 500;
+  text-transform: uppercase;
+
+ }
+.item-tools:after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+  display: block; /* This will put the pseudo element on its own line. */
+  width: 30px;
+  height: 3px;
+  background: #444fee;
+  bottom: 0;
+  right: calc(100% - 35px);
+}
+
 </style>
