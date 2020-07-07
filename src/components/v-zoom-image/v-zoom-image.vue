@@ -64,20 +64,19 @@ export default {
         bottom: 0,
         transition,
         flip: true
-
       }
     })
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 img {
   cursor: zoom-in;
   display: block;
   max-width: 100%;
   margin: auto;
-  box-shadow: 5px 3px 4px 2px  #888888;
+  box-shadow: 5px 3px 4px 2px #888888;
 }
 
 img.zoomed {

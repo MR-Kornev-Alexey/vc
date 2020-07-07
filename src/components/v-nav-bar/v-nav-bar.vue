@@ -72,8 +72,7 @@ export default {
           text: "Последние работы",
           route: "/projects"
         },
-        { id: 4, icon: "mdi-launch", text: "Услуги", route: "/service" },
-        { id: 5, icon: "mdi-account", text: "Контакт", route: "/contact" }
+        { id: 4, icon: "mdi-launch", text: "Услуги", route: "/service" }
       ];
     }
   }
