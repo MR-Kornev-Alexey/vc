@@ -6,16 +6,16 @@
       </v-col>
     </v-row>
     <v-row class="text-center  mt-4">
-      <v-col cols="7" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <img
           :src="require('../../assets/img/hpi.jpg')"
-          class="my-3 institute-img "
+          class="my-3 institute-img container--fluid"
           contain
           height="500"
           alt=""
         />
       </v-col>
-      <v-col cols="4" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <h3 class="mb-2">
           Тихоокеанский государственный университет ( бывший ХПИ)
         </h3>
@@ -30,16 +30,16 @@
       </v-col>
     </v-row>
     <v-row class="text-center  mt-4">
-      <v-col cols="7" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <img
           :src="require('../../assets/img/aeip.jpg')"
-          class="my-3 institute-img "
+          class="my-3 institute-img container--fluid"
           contain
           height="500"
           alt=""
         />
       </v-col>
-      <v-col cols="4" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <h3 class="mb-2">
           Хабаровский государственный университет экономики и права
         </h3>
@@ -54,16 +54,16 @@
       </v-col>
     </v-row>
     <v-row class="text-center  mt-4">
-      <v-col cols="7" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <img
           :src="require('../../assets/img/mgu.jpg')"
-          class="my-3 institute-img "
+          class="my-3 institute-img container--fluid"
           contain
           height="500"
           alt=""
         />
       </v-col>
-      <v-col cols="4" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <h3 class="mb-2">Московский государственный университет</h3>
         <v-flex
           v-for="items in importantDataMGU"
@@ -82,9 +82,9 @@
     </v-row>
     <v-row class="d-block">
       <v-col
+        cols="10"
         v-for="item in skills"
         :key="item.id"
-        cols="9"
         class=" d-flex text-left justify-start"
       >
         <div class="skill-image text-center align-self-center">
@@ -94,7 +94,11 @@
         <div class="mx-4 skill-title text-center align-self-center">
           {{ item.text }}
         </div>
-        <v-flex class="ml-4 skill-title text-center align-self-center">
+        <v-flex
+          cols="12"
+          md="4"
+          class="ml-4 skill-title text-center align-self-center"
+        >
           <v-progress-linear
             :color="item.color"
             height="16"

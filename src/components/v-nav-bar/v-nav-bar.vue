@@ -14,7 +14,7 @@
         />
       </v-flex>
     </v-app-bar>
-    <v-navigation-drawer flat v-model="drawer" dark app :src="bg">
+    <v-navigation-drawer height="100%" flat v-model="drawer" dark app :src="bg">
       <v-layout column align-center>
         <v-flex class="avatar-sidebar text-center">
           <v-avatar size="160">

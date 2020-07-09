@@ -1,4 +1,4 @@
-# freelancer
+# Kornev Alexey - freelancer
 
 ## Project setup
 ```

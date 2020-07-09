@@ -5,13 +5,9 @@
         <h2 class="">Последние работы</h2>
       </v-col>
     </v-row>
-    <v-row class="mt-4">
-      <v-col
-        class="ml-8 d-flex justify-space-around"
-        v-for="item in myLinks"
-        :key="item.id"
-      >
-        <v-flex class="col-md-6">
+    <v-row class="mt-4 d-block justify-center">
+      <v-row class="ml-8 " v-for="item in myLinks" :key="item.id">
+        <v-col cols="12" md="6">
           <h2>{{ item.title }}</h2>
           <p class="item-subtitle">{{ item.subtitle }}</p>
           <a class="item-link" target="_blank" :href="item.link"
@@ -19,11 +15,11 @@
           >
           <p class="item-tools">Инструменты:</p>
           <p class="item-sub-tools">{{ item.tools }}</p>
-        </v-flex>
-        <div class="col-md-6">
-          <ZoomImage imageWidth="400" imageHeight="200" :src="item.image" />
-        </div>
-      </v-col>
+        </v-col>
+        <v-col cols="12" md="6">
+          <ZoomImage :src="item.image" />
+        </v-col>
+      </v-row>
     </v-row>
   </v-container>
 </template>

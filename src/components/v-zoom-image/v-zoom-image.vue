@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-bind:style="{ width: imageWidth + 'px', height: imageHeight + 'px' }"
-    v-on:click="toggleZoom"
-  >
+  <div v-on:click="toggleZoom">
     <Frame :pose="pose" class="frame" />
     <ZoomImage :pose="pose" :src="src" />
   </div>
@@ -17,7 +14,7 @@ const transition = {
 };
 
 export default {
-  props: ["imageWidth", "imageHeight", "src"],
+  props: ["src"],
   data: () => ({ isZoomed: false }),
   computed: {
     pose() {

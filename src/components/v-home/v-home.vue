@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="text-center  mt-4">
-      <v-col cols="4" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <v-img
           :src="require('../../assets/img/alex.jpg')"
           class="my-3"
@@ -9,9 +9,9 @@
           height="500"
         />
       </v-col>
-      <v-col class="justify-center align-self-center" cols="4">
+      <v-col class="justify-center align-self-center" cols="12" md="4">
         <h1 class="mt-4">Web - разработчик</h1>
-        <p class="text-left">
+        <p class="text-left text-sm-center">
           Я все время программировал. Начинал на Фортране и Ассемблере.
         </p>
         <p class="text-left">
@@ -31,7 +31,7 @@
           уровня(.SVG, .PSD)
         </p>
       </v-col>
-      <v-col cols="4" class="justify-center align-self-center">
+      <v-col cols="12" md="4" class="justify-center align-self-center">
         <v-flex
           v-for="items in importantData"
           :key="items.id"
@@ -61,14 +61,20 @@
       </v-col>
     </v-row>
     <v-row class="justify-space-around">
-      <v-card cols="3" v-for="item in serviceWork" :key="item.id">
+      <v-card
+        class="col-md-3 col-11"
+        v-for="item in serviceWork"
+        :key="item.id"
+      >
         <v-card-title class="text-center justify-center">
           {{ item.text }}
         </v-card-title>
         <v-flex class="service-item text-center justify-center">
           <img :src="item.icon" alt="" />
         </v-flex>
-        <v-card-subtitle class="service-item-description">
+        <v-card-subtitle
+          class="service-item-description align-self-md-center justify-center"
+        >
           {{ item.description }}
         </v-card-subtitle>
       </v-card>
@@ -81,8 +87,8 @@
       </v-col>
     </v-row>
     <v-row justify="center" class="mt-6">
-      <v-app id="inspire" class="inspire">
-        <v-card elevation="24" max-width="600" class="mx-auto" light>
+      <v-app id="inspire" class="inspire slider-main">
+        <v-card elevation="24" class="mx-auto " light>
           <v-carousel
             :continuous="true"
             :cycle="true"
@@ -97,8 +103,8 @@
               :key="i"
             >
               <v-row class="fill-height" align="center" justify="center">
-                <div class="testimonial-content">
-                  <div class="testimonial-text">
+                <div class="testimonial-content ">
+                  <div class="testimonial-text slider-main">
                     {{ item.description }}
                   </div>
                 </div>
@@ -226,7 +232,7 @@ export default {
         icon:
           "https://s3.amazonaws.com/uifaces/faces/twitter/benefritz/128.jpg",
         description:
-          "Верстка была сделана четко и в срок. В ходе работы было выявлено несколько косяков дизайна, но они были устранены исполнителем. Было предложено несколько вариантов по более интересному и логичному отображению мобильной версии. В общем, рекомендую, ответственный, инициативный и квалифицированный исполнитель."
+          "Верстка была сделана четко и в срок. В ходе работы было выявлено несколько косяков дизайна, но они были устранены исполнителем. Было предложено несколько вариантов по более интересному и логичному отображению мобильной версии."
       },
       {
         id: 2,
@@ -339,6 +345,7 @@ export default {
 #inspire {
   height: 300px;
 }
+
 .new-wrap {
   flex: 1 1 auto;
   -webkit-backface-visibility: hidden;
@@ -349,5 +356,20 @@ export default {
   position: relative;
   height: 300px !important;
   padding-bottom: 40px;
+}
+.slider-main {
+  max-width: 600px;
+}
+@media (max-width: 380px) {
+  .slider-main {
+    max-width: 360px;
+    .testimonial-text {
+      padding: 0 10px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    p {
+    }
+  }
 }
 </style>
