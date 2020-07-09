@@ -263,4 +263,10 @@ export default {
   width: 100px;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .institute-img {
+    height: 200px;
+  }
+}
 </style>

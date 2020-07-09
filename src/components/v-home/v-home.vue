@@ -364,7 +364,7 @@ export default {
   .slider-main {
     max-width: 360px;
     .testimonial-text {
-      padding: 0 10px;
+      padding: 0 24px;
       font-size: 12px;
       margin-bottom: 20px;
     }
